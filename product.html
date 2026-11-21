@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Запчасть: FH Parts</title>
+  <meta name="description" content="Контрактные запчасти Toyota и Lexus из Дубая. FH Parts.">
+  <meta name="theme-color" content="#0f1216">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="has-sticky">
+
+<header class="header">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="FH Parts, на главную">
+      <img src="img/logo.png" alt="FH Parts, авторазбор Toyota и Lexus">
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="./#categories">Категории</a>
+      <a href="./#catalog">Каталог</a>
+      <a href="./#how">Как заказать</a>
+    </nav>
+    <a id="headWa" class="btn btn-wa btn-sm" aria-label="Написать в WhatsApp"></a>
+  </div>
+</header>
+
+<main class="wrap" id="app"></main>
+
+<div class="sticky-bar" id="stickyBar" hidden>
+  <a class="btn btn-wa" id="stickyWa"></a>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="./"><img src="img/logo.png" alt="FH Parts" style="height:52px"></a>
+      <p style="margin:10px 0 0">Контрактные запчасти Toyota и Lexus. Дубай, ОАЭ. Доставка в Россию и Казахстан.</p>
+    </div>
+    <div><p><small>© <span id="year"></span> FH Parts</small></p></div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Закрыть"></button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Назад"></button>
+  <img id="lbImg" alt="">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Вперёд"></button>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="data/products.js"></script>
+<script src="js/common.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>
