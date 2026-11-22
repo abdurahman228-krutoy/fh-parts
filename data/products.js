@@ -3,12 +3,12 @@
    Цены не указываем: торг в WhatsApp. */
 
 window.CATEGORIES = [
-  { id: "nose",       name: "Ноускаты",                 icon: "car" },
+  { id: "engine",     name: "Двигатель и трансмиссия",  icon: "engine" },
   { id: "body",       name: "Кузов и двери",            icon: "door" },
   { id: "optics",     name: "Оптика",                   icon: "light" },
   { id: "interior",   name: "Салон",                    icon: "wheel" },
   { id: "climate",    name: "Климат и электроника",     icon: "climate" },
-  { id: "engine",     name: "Двигатель и трансмиссия",  icon: "engine" },
+  { id: "nose",       name: "Ноускаты",                 icon: "car" },
   { id: "suspension", name: "Подвеска и привод",        icon: "spring" },
   { id: "oil",        name: "Масла и расходники",       icon: "oil" }
 ];
