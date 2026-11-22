@@ -139,6 +139,21 @@
       a.innerHTML = WA_ICON + 'Написать в WhatsApp';
       bindWhatsApp(a,"Здравствуйте! Хочу уточнить по запчастям FH Parts.");
     });
+    var menu = document.getElementById("menu"), ov = document.getElementById("menuOverlay"), bg = document.getElementById("burger");
+    if (menu && bg) {
+      var setMenu = function (open) {
+        menu.classList.toggle("open", open);
+        ov.hidden = !open;
+        menu.setAttribute("aria-hidden", open ? "false" : "true");
+        bg.setAttribute("aria-expanded", open ? "true" : "false");
+        document.body.style.overflow = open ? "hidden" : "";
+      };
+      bg.addEventListener("click", function () { setMenu(true); });
+      document.getElementById("menuClose").addEventListener("click", function () { setMenu(false); });
+      ov.addEventListener("click", function () { setMenu(false); });
+      menu.querySelectorAll(".menu-nav a").forEach(function (a) { a.addEventListener("click", function () { setMenu(false); }); });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
+    }
     var y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
   });

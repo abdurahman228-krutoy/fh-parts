@@ -45,8 +45,19 @@ h1, h2, h3 { line-height: 1.15; margin: 0; letter-spacing: -.02em; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -.02em; }
 .brand img { height: 46px; width: auto; }
 .brand span { display: none; font-size: 18px; }
-.nav { display: none; gap: 28px; font-weight: 500; color: var(--ink-2); }
-.nav a:hover { color: var(--red); }
+.head-left { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.burger { width: 44px; height: 44px; border: 0; background: transparent; border-radius: 12px; display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; flex: none; }
+.burger span { display: block; width: 22px; height: 2px; border-radius: 2px; background: var(--ink); }
+.burger:hover { background: rgba(0,0,0,.05); }
+.menu-overlay { position: fixed; inset: 0; background: rgba(15,18,22,.5); z-index: 90; }
+.menu { position: fixed; top: 0; left: 0; bottom: 0; width: min(320px, 86vw); background: #fff; z-index: 100; padding: 16px 20px calc(20px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 18px; transform: translateX(-102%); transition: transform .25s ease; box-shadow: 8px 0 30px rgba(0,0,0,.15); visibility: hidden; }
+.menu.open { transform: none; visibility: visible; }
+.menu-head { display: flex; align-items: center; justify-content: space-between; font-weight: 800; font-size: 18px; }
+.menu-head button { width: 44px; height: 44px; border: 0; background: transparent; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; }
+.menu-head svg { width: 24px; height: 24px; }
+.menu-nav { display: flex; flex-direction: column; flex: 1; }
+.menu-nav a { padding: 16px 4px; font-size: 18px; font-weight: 600; border-bottom: 1px solid var(--line); }
+.menu-nav a:hover { color: var(--red); }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   min-height: 48px; padding: 0 22px; border-radius: 999px; border: 0;
@@ -275,7 +286,6 @@ body.has-sticky { padding-bottom: 84px; }
   .header .wrap { height: 76px; }
   .brand img { height: 56px; }
   .brand span { display: inline; }
-  .nav { display: flex; }
   .header .btn-wa .label { display: inline; }
   .header .btn-wa { padding: 0 20px; }
   .hero .wrap { padding-top: 72px; padding-bottom: 76px; }

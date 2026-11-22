@@ -10,23 +10,36 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body class="has-sticky">
 
 <header class="header">
   <div class="wrap">
-    <a class="brand" href="./" aria-label="FH Parts, на главную">
-      <img src="img/logo.png" alt="FH Parts, авторазбор Toyota и Lexus">
-    </a>
-    <nav class="nav" aria-label="Разделы">
-      <a href="./#categories">Категории</a>
-      <a href="./#catalog">Каталог</a>
-      <a href="./#how">Как заказать</a>
-    </nav>
+    <div class="head-left">
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <a class="brand" href="./" aria-label="FH Parts, на главную">
+        <img src="img/logo.png?v=2" alt="FH Parts, авторазбор Toyota и Lexus">
+      </a>
+    </div>
     <a id="headWa" class="btn btn-wa btn-sm" aria-label="Написать в WhatsApp"></a>
   </div>
 </header>
+
+<div class="menu-overlay" id="menuOverlay" hidden></div>
+<aside class="menu" id="menu" aria-label="Меню" aria-hidden="true">
+  <div class="menu-head">
+    <span>Меню</span>
+    <button type="button" id="menuClose" aria-label="Закрыть меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <nav class="menu-nav">
+    <a href="./">Главная</a>
+    <a href="./#categories">Категории</a>
+    <a href="./#catalog">Каталог запчастей</a>
+    <a href="./#how">Как заказать</a>
+  </nav>
+  <a class="btn btn-wa btn-block" data-wa-generic></a>
+</aside>
 
 <main class="wrap" id="app"></main>
 
@@ -37,7 +50,7 @@
 <footer class="footer">
   <div class="wrap">
     <div>
-      <a class="brand" href="./"><img src="img/logo.png" alt="FH Parts" style="height:52px"></a>
+      <a class="brand" href="./"><img src="img/logo.png?v=2" alt="FH Parts" style="height:52px"></a>
       <p style="margin:10px 0 0">Контрактные запчасти Toyota и Lexus. Дубай, ОАЭ. Доставка в Россию и Казахстан.</p>
     </div>
     <div><p><small>© <span id="year"></span> FH Parts</small></p></div>
@@ -52,9 +65,9 @@
   <div class="lb-count" id="lbCount"></div>
 </div>
 
-<script src="js/config.js"></script>
-<script src="data/products.js"></script>
-<script src="js/common.js"></script>
-<script src="js/product.js"></script>
+<script src="js/config.js?v=2"></script>
+<script src="data/products.js?v=2"></script>
+<script src="js/common.js?v=2"></script>
+<script src="js/product.js?v=2"></script>
 </body>
 </html>
