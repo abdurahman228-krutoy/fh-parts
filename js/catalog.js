@@ -7,7 +7,7 @@
 
   var $ = function (id) { return document.getElementById(id); };
   var grid = $("grid"), empty = $("empty"), resultText = $("resultText"), resetBtn = $("reset");
-  var qInput = $("q"), heroQ = $("heroQ");
+  var heroQ = $("heroQ");
 
   /* Индекс для поиска */
   PRODUCTS.forEach(function (p) {
@@ -47,6 +47,12 @@
   }
 
   function renderChips() {
+    if (!$("catChips")) {
+      $("quick").innerHTML = ["Land Cruiser 200", "Lexus LX 570", "Prado 150", "Lexus LX 470", "Prado 250"].map(function (m) {
+        return '<button type="button" data-quick-model="' + U.esc(m) + '">' + U.esc(m) + '</button>';
+      }).join("");
+      return;
+    }
     var cc = '<button class="chip" type="button" data-cat="">Все</button>' + CATEGORIES.map(function (c) {
       return '<button class="chip" type="button" data-cat="' + c.id + '">' + U.esc(c.name) + '</button>';
     }).join("");
@@ -90,7 +96,6 @@
     document.querySelectorAll("#modelChips .chip").forEach(function (b) { b.classList.toggle("active", b.dataset.model === state.model); });
     document.querySelectorAll("#cats .cat").forEach(function (b) { b.classList.toggle("active", b.dataset.cat === state.cat); });
 
-    if (qInput.value !== state.q) qInput.value = state.q;
     if (heroQ.value !== state.q) heroQ.value = state.q;
 
     if (n === 0) {
@@ -120,13 +125,6 @@
   }
 
   /* ---- События ---- */
-  var timer;
-  qInput.addEventListener("input", function () {
-    state.q = qInput.value;
-    clearTimeout(timer);
-    timer = setTimeout(update, 120);
-  });
-
   $("heroSearch").addEventListener("submit", function (e) {
     e.preventDefault();
     state.q = heroQ.value;
@@ -155,7 +153,6 @@
   /* ---- Старт ---- */
   $("statCount").textContent = PRODUCTS.length;
   $("heroSearchIcon").innerHTML = U.icon("search");
-  $("catSearchIcon").innerHTML = U.icon("search");
   renderCats();
   renderChips();
 
