@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>FH Parts: контрактные запчасти Toyota и Lexus из Дубая</title>
+  <meta name="description" content="Авторазбор FH Parts в Дубае. Запчасти Toyota Land Cruiser, Prado, Lexus LX и GX с доставкой в Россию и Казахстан. Цена договорная, заказ через WhatsApp.">
+  <meta name="theme-color" content="#0f1216">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <div class="head-left">
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <a class="brand" href="./" aria-label="FH Parts, на главную">
+        <img src="img/logo.png?v=4" alt="FH Parts, авторазбор Toyota и Lexus">
+      </a>
+    </div>
+    <a id="headWa" class="btn btn-wa btn-sm" aria-label="Написать в WhatsApp"></a>
+  </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay" hidden></div>
+<aside class="menu" id="menu" aria-label="Меню" aria-hidden="true">
+  <div class="menu-head">
+    <span>Меню</span>
+    <button type="button" id="menuClose" aria-label="Закрыть меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <nav class="menu-nav">
+    <a href="./">Главная</a>
+    <a href="./#categories">Категории</a>
+    <a href="./#catalog">Каталог запчастей</a>
+    <a href="./#how">Как заказать</a>
+  </nav>
+  <a class="btn btn-wa btn-block" data-wa-generic></a>
+</aside>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow"><span class="dot"></span> Авторазбор в Дубае · Toyota и Lexus</div>
+      <h1>Контрактные запчасти для <em>Land Cruiser</em>, Prado и Lexus</h1>
+      <p class="lead">Привозим из Дубая в Россию и Казахстан. Цену обсуждаем лично в WhatsApp.</p>
+
+      <form class="search" id="heroSearch" role="search" autocomplete="off">
+        <span id="heroSearchIcon"></span>
+        <input id="heroQ" type="search" placeholder="Например: фары Prado 150, руль LX 570" aria-label="Поиск запчастей" enterkeyhint="search">
+        <button class="btn btn-dark" type="submit">Найти</button>
+      </form>
+
+      <div class="quick" id="quick" aria-label="Быстрый выбор модели"></div>
+
+      <div class="stats">
+        <div><b id="statCount">0</b><span>позиций в каталоге</span></div>
+        <div><b>РФ и КЗ</b><span>доставка</span></div>
+        <div><b>Дубай</b><span>склад разбора</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="categories">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Категории</h2>
+      </div>
+      <div class="cats" id="cats"></div>
+    </div>
+  </section>
+
+  <section class="section" id="catalog">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Каталог запчастей</h2>
+      </div>
+
+      <div class="result-line">
+        <span id="resultText"></span>
+        <button class="reset" id="reset" type="button" hidden>Сбросить</button>
+      </div>
+
+      <div class="grid" id="grid"></div>
+      <div id="empty" class="empty" hidden></div>
+
+      <div class="cta">
+        <div>
+          <h2>Не нашли нужную деталь?</h2>
+          <p>Напишите нам в WhatsApp: название детали, модель и год. Найдём на разборе и пришлём фото и видео.</p>
+        </div>
+        <a class="btn btn-wa" id="ctaWa"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Как заказать</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="num">1</span><div><b>Выберите деталь</b><p>Найдите запчасть в каталоге по названию, категории или модели автомобиля.</p></div></div>
+        <div class="step"><span class="num">2</span><div><b>Напишите в WhatsApp</b><p>Нажмите кнопку в карточке товара. Название и артикул детали сразу попадут в сообщение.</p></div></div>
+        <div class="step"><span class="num">3</span><div><b>Договоримся о цене</b><p>Подтвердим наличие, пришлём фото и видео, обсудим цену и доставку в Россию или Казахстан.</p></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="./"><img src="img/logo.png?v=4" alt="FH Parts" style="height:52px"></a>
+      <p style="margin:10px 0 0">Контрактные запчасти Toyota и Lexus. Дубай, ОАЭ. Доставка в Россию и Казахстан.</p>
+    </div>
+    <div>
+      <a class="btn btn-wa" data-wa-generic id="footWa"></a>
+      <p><small>© <span id="year"></span> FH Parts</small></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js?v=4"></script>
+<script src="data/products.js?v=4"></script>
+<script src="js/common.js?v=4"></script>
+<script src="js/search-terms.js?v=4"></script>
+<script src="js/catalog.js?v=4"></script>
+</body>
+</html>
